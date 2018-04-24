@@ -4,8 +4,12 @@ const cors = require('cors')
 const app = express()
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/hacktivoverflow');
 require('dotenv').config()
+
+const usermongo = process.env.USERMONGO
+const passmongo = process.env.PASSMONGO
+
+mongoose.connect(`mongodb://${usermongo}:${passmongo}@ds023088.mlab.com:23088/hacktivoverflow`);
 
 app.use(cors())
 app.use(express.json())
