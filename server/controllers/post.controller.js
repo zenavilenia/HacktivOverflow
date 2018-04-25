@@ -379,7 +379,7 @@ module.exports = {
           }, {
             overwrite: false
           }, function (err, post) {
-            if(!err) {
+            if(!err) {isbn, title, author, category, stock
               res.status(200).send({
                 message: 'edit like success'
               })

@@ -6,7 +6,7 @@ const {sendNotification} = require('./controllers/mail.controller')
 var sendEmail = new cron.CronJob({
   cronTime: '* * * * *',
   onTick: function() {
-    axios.post('http://localhost:3000/sendNotification')
+    axios.post('http://35.187.244.238/sendNotification')
       .then(response => {
         console.log(response)
       })
